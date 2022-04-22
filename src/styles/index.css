@@ -3,4 +3,21 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: Roboto;
+  color: var(--text-color);
+}
+
+html{
+  background-color: var(--background-color);
+}
+
+html[mode='light']{
+  --text-color: #414141;
+  --second-text-color: #fff;
+  --background-color: #FCF3E3;
+  --second-background-color: #E07A5F;
+}
+
+html[mode='dark']{
+
 }
