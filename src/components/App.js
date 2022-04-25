@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/App.css'; 
 import Contact from './Contact';
 import ContactForm from './ContactForm';
 import Experience from './Experience';
@@ -7,12 +6,19 @@ import Header from "./Header"
 import Section from './Section';
 import WaveSection from './WaveSection';
 import ContactList from './ContactList';
+import SkillCategory from './SkillCategory';
+import Skill from './Skill';
 
+
+import '../styles/App.css'; 
 
 import github from "../assets/Github.svg"
 import linkedin from "../assets/Linkedin.svg"
 import discord from "../assets/Discord.svg"
 import telephone from "../assets/Telephone.svg"
+
+
+import htmlEtCssSkill from "../assets/skills/HTMLCSS.png";
 // import github from "../assets/Github.svg"
 
 
@@ -28,8 +34,13 @@ function App() {
         <Experience date="2020-2021">Stage Développeur web PHP <br />chez SMILE</Experience>
 
       </WaveSection>
-      <Section title="Mes Compétences">
-
+      <Section id="skills" title="Mes Compétences">
+        <SkillCategory nom="Test">
+          <Skill nom="test" image={htmlEtCssSkill}></Skill>
+        </SkillCategory>
+        <SkillCategory nom="Test">
+          <Skill nom="test" image="test"></Skill>
+        </SkillCategory>
       </Section>
       <Section title="Projets réalisés">
 
