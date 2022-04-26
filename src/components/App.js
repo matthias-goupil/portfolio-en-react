@@ -46,7 +46,6 @@ function App() {
           <Skill nom="test" image="test"></Skill>
           <Skill nom="test" image="test"></Skill>
           <Skill nom="test" image="test"></Skill>
-
         </SkillCategory>
       </Section>
       <Section id="projects" title="Projets réalisés">

@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react"
 import "../styles/Menu.css"
 
 function Menu(props){
-    const VISIBLE = 1;
-    const HIDDEN = 2;
-    const ENTERING = 3;
-    const LEAVING = 4;
-
-    const [isOpen, setIsOpen] = useState(false);
-    const [state, setState] = useState(isOpen ? VISIBLE : HIDDEN);
+    const [isOpen, setIsOpen] = [props.isOpen,props.setIsOpen];
 
     const liens = props.children;
 
