@@ -8,19 +8,22 @@ import WaveSection from './WaveSection';
 import ContactList from './ContactList';
 import SkillCategory from './SkillCategory';
 import Skill from './Skill';
-
+import Project from './Project';
 
 import '../styles/App.css'; 
 
+// IMPORT CONTACT IMAGES
 import github from "../assets/Github.svg"
 import linkedin from "../assets/Linkedin.svg"
 import discord from "../assets/Discord.svg"
 import telephone from "../assets/Telephone.svg"
 
-
+// IMPORT SKILL IMAGES
 import htmlEtCssSkill from "../assets/skills/HTMLCSS.png";
 // import github from "../assets/Github.svg"
 
+// IMPORT PROJECT IMAGES
+import project1 from "../assets/projects/serre.jpg"
 
 function App() {
   return (
@@ -32,7 +35,6 @@ function App() {
         <Experience date="2020-2021">Dut informatique <br />IUT Montpellier-Sète</Experience>
         <Experience date="2020-2021">Participation à la nuit de l'info <br />IUT Montpellier-Sète</Experience>
         <Experience date="2020-2021">Stage Développeur web PHP <br />chez SMILE</Experience>
-
       </WaveSection>
       <Section id="skills" title="Mes Compétences">
         <SkillCategory nom="Test">
@@ -40,10 +42,29 @@ function App() {
         </SkillCategory>
         <SkillCategory nom="Test">
           <Skill nom="test" image="test"></Skill>
+          <Skill nom="test" image="test"></Skill>
+          <Skill nom="test" image="test"></Skill>
+          <Skill nom="test" image="test"></Skill>
+          <Skill nom="test" image="test"></Skill>
+
         </SkillCategory>
       </Section>
-      <Section title="Projets réalisés">
+      <Section id="projects" title="Projets réalisés">
+        <div>
+          <Project nom="test" image={project1}>
+          <div className='contexte'>
+              <h3>Contexte</h3>
+              <p>Pour eerer</p>
+          </div>
+          </Project>
 
+        <Project nom="test" image="test">
+          <div className='contexte'>
+              <h3>Contexte</h3>
+              <p>Pour eerer</p>
+          </div>
+        </Project>
+        </div>
       </Section>
       <WaveSection id="contact" className="noBottom" title="Contactez moi">
         <div>

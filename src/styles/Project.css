@@ -1,0 +1,155 @@
+.project{
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.25s;
+    position: relative;
+}
+
+.project > img{
+    width: 100%;
+}
+
+.project > div{
+    width: calc(100% - 50px);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.project > div > p{
+    text-align: center;
+    color: var(--text-color);
+}
+
+.project > div > a{
+    padding: 10px 20px;
+    color: var(--second-background-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 4px solid var(--second-background-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.project > div a::before{
+    content: "";
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+bottom: -100%;
+left: 0;
+transition: 0.25s;
+background-color: var(--second-background-color);
+}
+
+.project > div a::after{
+    content: "En savoir plus";
+    font-weight: bold;
+    position: absolute;
+    color: transparent;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.25s;
+}
+
+.project > div > a:hover::after{
+    color: #fff;
+}
+
+.project > div > a:hover::before{
+    transform: translateY(-100%);
+}
+
+.project::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--second-background-color);
+    transform: scale(0);
+    transition: 0.25s;
+    position: absolute;
+    bottom: 0;
+  } 
+
+  .project:hover::before {
+    transform: scale(1);
+  }
+
+
+.fenetreModale{
+    width: 100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.fenetreModale.open{
+    display: flex;
+}
+
+.fenetreModale > .content{
+    width: 60%;
+    height: 70%;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.fenetreModale > .content > button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.fenetreModale > .buttonBar{
+    width: 60%;
+    height: 100px;
+    padding: 0 50px;
+    background-color: var(--second-background-color);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5%;
+}
+
+.fenetreModale > .buttonBar a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #414141;
+    font-size: 1.3em;
+    color: #fff;
+    border-radius: 5px;
+}
