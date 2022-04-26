@@ -20,10 +20,26 @@ import telephone from "../assets/Telephone.svg"
 
 // IMPORT SKILL IMAGES
 import htmlEtCssSkill from "../assets/skills/HTMLCSS.png";
+import phpSkill from "../assets/skills/Php.png";
+import javascriptSkill from "../assets/skills/Javascript.png";
+import sqlSkill from "../assets/skills/HTMLCSS.png";
+import javaSkill from "../assets/skills/Java.png";
+import javaFxSkill from "../assets/skills/HTMLCSS.png";
+import androidStudioSkill from "../assets/skills/HTMLCSS.png";
+import cSkill from "../assets/skills/C.png";
+import symfonySkill from "../assets/skills/HTMLCSS.png";
+import reactSkill from "../assets/skills/HTMLCSS.png";
+import threeJsSkill from "../assets/skills/HTMLCSS.png";
+// import htmlEtCssSkill from "../assets/skills/HTMLCSS.png";
+
 // import github from "../assets/Github.svg"
 
 // IMPORT PROJECT IMAGES
-import project1 from "../assets/projects/serre.jpg"
+import serreProject from "../assets/projects/serre.jpg"
+import bangProject from "../assets/projects/Bang.png"
+import eCommerceProject from "../assets/projects/e-commerce.png"
+import flappyBirdProject from "../assets/projects/FlappyBird.png"
+
 
 function App() {
   return (
@@ -37,32 +53,24 @@ function App() {
         <Experience date="2020-2021">Stage Développeur web PHP <br />chez SMILE</Experience>
       </WaveSection>
       <Section id="skills" title="Mes Compétences">
-        <SkillCategory nom="Test">
-          <Skill nom="test" image={htmlEtCssSkill}></Skill>
+        {Object.keys(skills).map((category) =>{
+          return <SkillCategory key={category} nom={category}>
+          {skills[category].map((skill) => {
+            return <Skill key={skill.name} nom={skill.name} image={skill.image}></Skill>
+          })}
         </SkillCategory>
-        <SkillCategory nom="Test">
-          <Skill nom="test" image="test"></Skill>
-          <Skill nom="test" image="test"></Skill>
-          <Skill nom="test" image="test"></Skill>
-          <Skill nom="test" image="test"></Skill>
-          <Skill nom="test" image="test"></Skill>
-        </SkillCategory>
+        })}
       </Section>
       <Section id="projects" title="Projets réalisés">
         <div>
-          <Project nom="test" image={project1}>
-          <div className='contexte'>
-              <h3>Contexte</h3>
-              <p>Pour eerer</p>
-          </div>
-          </Project>
-
-        <Project nom="test" image="test">
-          <div className='contexte'>
-              <h3>Contexte</h3>
-              <p>Pour eerer</p>
-          </div>
-        </Project>
+          {projects.map((project) => {
+            return <Project nom={project.name} image={project.image}>
+            <div className='contexte'>
+                <h3>Contexte</h3>
+                <p>Pour eerer</p>
+            </div>
+            </Project>
+          })}
         </div>
       </Section>
       <WaveSection id="contact" className="noBottom" title="Contactez moi">
@@ -82,5 +90,93 @@ function App() {
     </React.Fragment>
   );
 }
+
+
+// SKILLS DATA
+var skills = {
+  "Langages et frameworks" : [
+    {
+      name: "HTML et CSS",
+      image: htmlEtCssSkill
+    },
+    {
+      name: "Javascript",
+      image: javascriptSkill
+    },
+    {
+      name: "React",
+      image: reactSkill
+    },
+    {
+      name: "ThreeJs",
+      image: threeJsSkill
+    },
+    {
+      name: "PHP",
+      image: phpSkill
+    },
+    {
+      name: "Symfony",
+      image: symfonySkill
+    },
+    {
+      name: "SQL",
+      image: sqlSkill
+    },
+    {
+      name: "Java",
+      image: javaSkill
+    },
+    {
+      name: "JavaFx",
+      image: javaFxSkill
+    },
+    {
+      name: "Android Studio",
+      image: androidStudioSkill
+    },
+    {
+      name: "C",
+      image: cSkill
+    },
+  ],
+  "software": [
+    {
+      name: "Git",
+      image: ""
+    },
+    {
+      name: "Linux",
+      image: ""
+    },
+    {
+      name: "Wordpress",
+      image: ""
+    },
+    {
+      name: "Docker",
+      image: ""
+    },
+  ]
+};
+
+const projects = [
+  {
+    name: "Application web pour la Serre de l'IUT de Montpellier",
+    image: serreProject
+  },
+  {
+    name: "Site e-commerce en PHP",
+    image: eCommerceProject
+  },
+  {
+    name: "Flappy Bird en Javascript",
+    image: flappyBirdProject
+  },
+  {
+    name: "IHM du jeu \"Bang !\" en JavaFx",
+    image: bangProject
+  },
+]
 
 export default App;
