@@ -4,6 +4,7 @@ section{
 }
 
 section .title{
+    text-transform: uppercase;
     font-size: 2.8em;
     text-align: center;
     color: var(--text-color);

@@ -27,3 +27,96 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+#presentation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#presentation > div{
+  width: 50%;
+}
+
+#presentation > div > p{
+  font-size: 1.3em;
+  text-align: justify;
+}
+
+#presentation > div > .title{
+  text-align: left;
+}
+
+#presentation > img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgb(41 41 41 / 25%);
+}
+
+main{
+  width: 100%;
+  margin-top: 200px;
+}
+
+#presentation a{
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  --c: var(--second-background-color);
+  color: var(--c);
+  font-size: 16px;
+  border: 0.3em solid var(--c);
+  border-radius: 5px; 
+  width: 200px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+
+#presentation a span{
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+
+#presentation a:hover {
+  color: #fff;
+}
+
+#presentation a:hover span {
+  transform: translateY(0) scale(2);
+}
+
+#presentation a span:nth-child(1) {
+  --n: 1;
+}
+
+#presentation a span:nth-child(2) {
+  --n: 2;
+}
+
+#presentation a span:nth-child(3) {
+  --n: 3;
+}
+
+#presentation a span:nth-child(4) {
+  --n: 4;
+}

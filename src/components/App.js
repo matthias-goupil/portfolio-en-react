@@ -22,15 +22,20 @@ import telephone from "../assets/Telephone.svg"
 import htmlEtCssSkill from "../assets/skills/HTMLCSS.png";
 import phpSkill from "../assets/skills/Php.png";
 import javascriptSkill from "../assets/skills/Javascript.png";
-import sqlSkill from "../assets/skills/HTMLCSS.png";
+import sqlSkill from "../assets/skills/SQL.png";
 import javaSkill from "../assets/skills/Java.png";
-import javaFxSkill from "../assets/skills/HTMLCSS.png";
-import androidStudioSkill from "../assets/skills/HTMLCSS.png";
+import javaFxSkill from "../assets/skills/JavaFx.png";
+import androidStudioSkill from "../assets/skills/AndroidStudio.png";
 import cSkill from "../assets/skills/C.png";
-import symfonySkill from "../assets/skills/HTMLCSS.png";
-import reactSkill from "../assets/skills/HTMLCSS.png";
-import threeJsSkill from "../assets/skills/HTMLCSS.png";
-// import htmlEtCssSkill from "../assets/skills/HTMLCSS.png";
+import symfonySkill from "../assets/skills/Symfony.png";
+import reactSkill from "../assets/skills/React.png";
+import threeJsSkill from "../assets/skills/ThreeJs.png";
+
+import linux from "../assets/skills/Linux.png";
+import docker from "../assets/skills/Docker.png"
+import wordpress from "../assets/skills/Wordpress.png"
+import git from "../assets/skills/Git.png"
+import portfolio from "../assets/projects/Portfolio.png"
 
 // import github from "../assets/Github.svg"
 
@@ -39,6 +44,9 @@ import serreProject from "../assets/projects/serre.jpg"
 import bangProject from "../assets/projects/Bang.png"
 import eCommerceProject from "../assets/projects/e-commerce.png"
 import flappyBirdProject from "../assets/projects/FlappyBird.png"
+import instagram from "../assets/projects/Instagram.png"
+
+import photoProfil from "../assets/photoProfil.jpg"
 
 
 function App() {
@@ -46,17 +54,26 @@ function App() {
     <React.Fragment>
       <Header />
       <main>
+        <section id="presentation">
+          <div>
+            <h2 className='title'>à propos de moi</h2>
+            <p>
+Je m'appelle Matthias, j'ai 19 ans et suis en deuxième année de DUT informatique à l'IUT de Montpellier. Le développement web est actuellement le domaine qui me plait le plus dans l'informatique et je veux en faire mon métier. Je suis d'ailleurs à la recherche d'un stage dans ce domaine là. Quand j'ai du temps libre, j'aime découvrir et apprendre à utiliser de nouvelles technologies. 
+            </p>
+            <a href="#"> Mon CV<span></span><span></span><span></span><span></span></a>
+          </div>
+          <img alt="" src={photoProfil}></img>
+        </section>
       <WaveSection title="Mes expériences" id="experiences">
-        <Experience date="2020-2021">Bac STI2D Mention Très Bien <br />Lycée St Joseph Pierre Rouge</Experience>
-        <Experience date="2020-2021">Dut informatique <br />IUT Montpellier-Sète</Experience>
-        <Experience date="2020-2021">Participation à la nuit de l'info <br />IUT Montpellier-Sète</Experience>
-        <Experience date="2020-2021">Stage Développeur web PHP <br />chez SMILE</Experience>
+        {experiences.map((experience) => {
+          return <Experience key={experience.name} date={experience.date}><span>{experience.name}</span>{experience.place}</Experience>
+        })}
       </WaveSection>
       <Section id="skills" title="Mes Compétences">
         {Object.keys(skills).map((category) =>{
           return <SkillCategory key={category} nom={category}>
           {skills[category].map((skill) => {
-            return <Skill key={skill.name} nom={skill.name} image={skill.image}></Skill>
+            return <Skill key={skill.name} nom={skill.name} image={skill.image} maitrise={skill.maitrise}></Skill>
           })}
         </SkillCategory>
         })}
@@ -64,11 +81,8 @@ function App() {
       <Section id="projects" title="Projets réalisés">
         <div>
           {projects.map((project) => {
-            return <Project nom={project.name} image={project.image}>
-            <div className='contexte'>
-                <h3>Contexte</h3>
-                <p>Pour eerer</p>
-            </div>
+            return <Project nom={project.name} image={project.image} github={project.github}>
+            {project.content}
             </Project>
           })}
         </div>
@@ -91,92 +105,152 @@ function App() {
   );
 }
 
+const experiences = [
+  {
+    date: "2022",
+    name: "Stage développeur web PHP",
+    place: "SMILE Montpellier"
+  },
+  {
+    date: "2022",
+    name: "Participation à la nuit de l'info",
+    place: "IUT Montpellier-Sète"
+  },
+  {
+    date: "2020 - 2022",
+    name: "DUT informatique",
+    place: "IUT Montpellier-Sète"
+  },
+  {
+    date: "2018 - 2020",
+    name: "Bac STI2D Mention Très Bien",
+    place: "Lycée St Joseph Pierre Rouge"
+  },
+  
+  
+  
+]
 
 // SKILLS DATA
 var skills = {
   "Langages et frameworks" : [
     {
       name: "HTML et CSS",
-      image: htmlEtCssSkill
+      image: htmlEtCssSkill,
+      maitrise: 4
     },
     {
       name: "Javascript",
-      image: javascriptSkill
+      image: javascriptSkill,
+      maitrise: 4
     },
     {
       name: "React",
-      image: reactSkill
+      image: reactSkill,
+      maitrise: 3
     },
     {
       name: "ThreeJs",
-      image: threeJsSkill
+      image: threeJsSkill,
+      maitrise: 3
     },
     {
       name: "PHP",
-      image: phpSkill
+      image: phpSkill,
+      maitrise: 3
     },
     {
       name: "Symfony",
-      image: symfonySkill
+      image: symfonySkill,
+      maitrise: 2
     },
     {
       name: "SQL",
-      image: sqlSkill
+      image: sqlSkill,
+      maitrise: 4
     },
     {
       name: "Java",
-      image: javaSkill
+      image: javaSkill,
+      maitrise: 3
     },
     {
       name: "JavaFx",
-      image: javaFxSkill
+      image: javaFxSkill,
+      maitrise: 2
     },
     {
       name: "Android Studio",
-      image: androidStudioSkill
+      image: androidStudioSkill,
+      maitrise: 2
     },
     {
       name: "C",
-      image: cSkill
+      image: cSkill,
+      maitrise: 3
     },
   ],
   "software": [
     {
-      name: "Git",
-      image: ""
-    },
-    {
       name: "Linux",
-      image: ""
+      image: linux  ,
+      maitrise: 3
     },
     {
       name: "Wordpress",
-      image: ""
+      image: wordpress,
+      maitrise: 3
     },
     {
       name: "Docker",
-      image: ""
+      image: docker,
+      maitrise: 2
     },
+    {
+      name: "Git",
+      image: git,
+      maitrise: 3
+    }
   ]
 };
 
 const projects = [
   {
+    name: "Instagram en Symfony",
+    image: instagram,
+    content: <p>Test</p>,
+    github: "https://github.com/matthias-goupil/instagram-symfony"
+  },
+  {
+    name: "site portfolio",
+    image: portfolio,
+    content: <p>Test</p>,
+    github: "https://github.com/matthias-goupil/portfolio-en-react"
+  },
+  {
     name: "Application web pour la Serre de l'IUT de Montpellier",
-    image: serreProject
+    image: serreProject,
+    content: <p>Test</p>,
+    github: null
   },
   {
     name: "Site e-commerce en PHP",
-    image: eCommerceProject
-  },
-  {
-    name: "Flappy Bird en Javascript",
-    image: flappyBirdProject
+    image: eCommerceProject,
+    content: <p>Test</p>,
+    github: "https://github.com/matthias-goupil/projet-e-Commerce-IUT"
   },
   {
     name: "IHM du jeu \"Bang !\" en JavaFx",
-    image: bangProject
+    image: bangProject,
+    content: <p>Test</p>,
+    github: null
   },
+  {
+    name: "Flappy Bird en Javascript",
+    image: flappyBirdProject,
+    content: <p>Test</p>,
+    github: null
+  }
 ]
 
 export default App;

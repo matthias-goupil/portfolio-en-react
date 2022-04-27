@@ -21,7 +21,7 @@ function Project(props){
                         {props.children}
                     </div>
                     <div className="buttonBar">
-                        <a href="#">Github</a>
+                        {props.github && <a target="_blank" href={props.github}>Github</a>}
                         <a href="#">Tester le projet</a>
                     </div>
                    

@@ -12,9 +12,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 150px;
     height: 60px;
-    padding-right: 10px;
-    padding: 10px 60px;
+
     border-radius: 5px 0 0 5px;
     background-color: var(--text-color);
     color: var(--second-background-color);
@@ -28,5 +28,16 @@
     height: 60px;
     width: 300px;
     border-radius: 0 5px 5px 0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s;
 }
 
+.experience:hover .content{
+    transform: translateX(10px);
+}
+
+.experience .content span{
+    font-weight: bold;
+    font-size: 1.2em;
+}

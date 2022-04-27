@@ -31,8 +31,35 @@
 
 .skill > div > p{
     background-color: #fff;
-    font-size: calc(var(--size1) - 15px);
+    font-size: 1.4em;
     font-weight: bold;
     text-align: center;
     color: #414141;
+    font-weight: bold;
 }
+
+.skill > div > div > p {
+    margin-top: 10px;
+}
+
+.skill > div > div >div {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.skill > div > div >div span{
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 4px solid #414141;
+}
+
+.skill > div > div >div span.active{
+    background-color: #414141;
+}
+
