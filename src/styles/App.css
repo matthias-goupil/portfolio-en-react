@@ -69,7 +69,7 @@ main{
   justify-content: center;
   align-items: center;
   --c: var(--second-background-color);
-  color: var(--c);
+  color: #414141;
   font-size: 16px;
   border: 0.3em solid var(--c);
   border-radius: 5px; 

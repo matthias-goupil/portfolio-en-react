@@ -11,6 +11,12 @@
     position: relative;
 }
 
+.project:hover{
+    transform: scale(1.025);
+
+    box-shadow: 0px 4px 4px rgb(41 41 41 / 25%);
+}
+
 .project > img{
     width: 100%;
 }
@@ -156,4 +162,41 @@ background-color: var(--second-background-color);
     font-size: 1.3em;
     color: #fff;
     border-radius: 5px;
+}
+
+.fenetreModale .content > div{
+    margin-top: 50px;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+.fenetreModale .images img{
+    width: 25%;
+}
+
+.fenetreModale .content > div > .images{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.fenetreModale .content li::marker{
+    color: var(--second-background-color);
+}
+
+.fenetreModale .content li{
+    margin-left: 20px;
+}
+
+.fenetreModale .content h3{
+    margin-top: 30px;
+}
+
+.fenetreModale .content .Pliste{
+    margin-top: 10px;
+    font-weight: bold;
 }
