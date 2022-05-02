@@ -30,4 +30,10 @@
     color: #fff;
     resize: none;
     text-decoration: underline;
-  }
+}
+
+@media screen and (max-width: 800px){
+    .contact{
+        width: 100%;
+    }
+}

@@ -63,3 +63,16 @@
     background-color: #414141;
 }
 
+@media screen and (max-width: 800px){
+    .skill{
+        width: 150px;
+        height: auto;
+    }
+
+    .skill > div > p{
+        font-size: 1em;
+    }
+    .skill > div > div > p{
+        font-size: 0.8em;
+    }
+}

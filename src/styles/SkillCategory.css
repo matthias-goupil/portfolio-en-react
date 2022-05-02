@@ -22,4 +22,17 @@
     column-gap: 20px;
     row-gap: 20px;
     flex-wrap: wrap;
+
+}
+
+@media screen and (max-width: 1289px){
+    .skillCategory >div{
+        width: 100%;
+    justify-content: center;
+
+    }
+
+    .skillCategory > p{
+        display: none;
+    }
 }

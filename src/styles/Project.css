@@ -200,3 +200,14 @@ background-color: var(--second-background-color);
     margin-top: 10px;
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 800px){
+    .fenetreModale > .content{
+        height: 80%;
+    }
+    .fenetreModale > .content,.fenetreModale > .buttonBar{
+        width: 95%;
+    }
+
+}

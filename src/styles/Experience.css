@@ -41,3 +41,31 @@
     font-weight: bold;
     font-size: 1.2em;
 }
+
+@media screen and (max-width: 800px){
+    .experience {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .experience .content, .experience .date{
+        width: 100%;
+    }
+
+    .experience .content{
+        border-radius: 0 0 5px 5px;
+        border: none;
+        border-top: 4px solid var(--text-color);
+    }
+
+    .experience .date{
+        border-radius: 5px 5px 0 0;
+        height: 30px;
+    }
+
+    .experience:hover .content{
+        transform: translateY(-11px);
+    }
+
+}

@@ -69,7 +69,7 @@ function App() {
             <p>
 Je m'appelle Matthias, j'ai 19 ans et suis en deuxième année de DUT informatique à l'IUT de Montpellier. Le développement web est actuellement le domaine qui me plait le plus dans l'informatique et je veux en faire mon métier. En ce moment, je suis stagiaire développeur web chez SMILE. Quand j'ai du temps libre, l'une des mes occupations est de découvrir et d'apprendre à utiliser de nouvelles technologies. 
             </p>
-            <a href="#"> Mon CV<span></span><span></span><span></span><span></span></a>
+            <a target="_blank" href="https://matthiasgoupil.fr/documents/CV Matthias GOUPIL.pdf"> Mon CV<span></span><span></span><span></span><span></span></a>
           </div>
           <img target="_blank" alt="" src={photoProfil}></img>
         </section>

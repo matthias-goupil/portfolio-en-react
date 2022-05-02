@@ -120,3 +120,26 @@ main{
 #presentation a span:nth-child(4) {
   --n: 4;
 }
+
+@media screen and (max-width: 800px){
+  #contact > div{
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1289px){
+  #presentation{
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #presentation > div{
+    width: 100%;
+  }
+
+  #skills{
+    padding: 0 5%;
+  }
+}
+
